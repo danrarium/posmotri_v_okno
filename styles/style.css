@@ -16,6 +16,10 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: center;
 }
 
 h1,
@@ -56,7 +60,7 @@ ol {
 
 .content__list {
   height: 298px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .content__details {
@@ -208,8 +212,11 @@ button {
   font-size: 18px;
   line-height: 21.6px;
   text-align: center;
-  height: 34px;
+  min-height: 34px;
+  font-weight: bold;
+  font-family: inherit;
 }
+
 
 .search-form__submit-button {
   align-self: end;
@@ -224,7 +231,7 @@ button {
   outline: none;
 }
 
-.search-form__label:has(.search-form__textfield:focus-visible) {
+.search-form__label:has(:focus-visible) {
   border: #fff solid 1px;
 }
 
@@ -232,17 +239,14 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
   background-color: #fff;
 }
 
-.search-form__pseudo-checkbox:focus {
-  outline: none;
-}
-
-.search-form__label:has(.search-form__checkbox:focus-visible) {
-  border: #fff solid 1px;
-}
-
 button:focus {
   outline: none;
 }
+
+button:focus-visible {
+  outline: #fff solid 1px;
+}
+
 
 .search-form__checkbox-list .search-form__label:hover {
   text-decoration: underline;
@@ -281,6 +285,10 @@ input[type="checkbox"]:checked + .search-form__pseudo-checkbox::before {
 
 .content__card-link:hover {
   text-decoration: underline;
+}
+
+.content__card-link:active {
+  background-color: #545050;
 }
 
 button:active {
