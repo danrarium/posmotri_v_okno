@@ -43,7 +43,9 @@ ol {
   align-items: end;
   justify-content: center;
   width: 1140px;
-  margin: 133px 30px;
+  margin-top: 133px;
+  margin-left: 30px;
+  margin-right: 30px;
   gap: 30px;
 }
 
